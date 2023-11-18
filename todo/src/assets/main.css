@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+main{
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+button, input, .my-style{
+  border-radius: 6px;
+  border: solid 1px lightblue;
+  padding:10px;
+  transition: 0.5s ease;
+}
+
+.task-card button{
+  color:red;
+}
+
+.my-list{
+  display:grid;
+  grid-template-rows:auto;
+  grid-template-columns: 100%;
+  grid-gap:5px;
+
+}
+
+button:hover{
+  background-color: aquamarine;
+}
+
+input:hover{
+  background-color: lightblue;
+}
+
+.my-style:hover{
+  background-color: lightblue;
+}
