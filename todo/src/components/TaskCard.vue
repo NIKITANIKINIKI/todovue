@@ -5,7 +5,7 @@
             <p>{{ modal.description }}</p>
         </div>
         <div class="task-card">
-            <button @click="emitOnDone" v-if="!modal.status ">✓</button>
+            <button @click="emitOnDone" v-if="!modal.status">✓</button>
             <button @click="emitOnRemove" v-else>х</button>
         </div>
     </div>
@@ -20,16 +20,16 @@ export default{
             id:0,
             title:'Create video ',
             description: 'And upload on YouTube ',
-            status:true
+            status:false
         }
        } 
     },
     setup(props, {emit}){
         const emitOnDone=()=>{
-            emit('onDone')
+            emit('emitOnDone')
         }
         const emitOnRemove=()=>{
-            emit('OmRemove')
+            emit('emitOnRemove')
         }
         return {
             emitOnDone,
