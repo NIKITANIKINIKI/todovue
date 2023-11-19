@@ -11,13 +11,13 @@ export default {
     TaskInput 
   },
   setup(){
-    const taskList=ref([{id:0, title:'Create message', description:'Add message', status:false}])
+    const taskList=ref([{id:1, title:'Create message', description:'Add message', status:false}])
     // const addTask=({title, description}) =>{
     //   taskList.value=[...taskList.value, {id: taskList.value.length+1, title, description, status:false}]
     // }
     const addTask = ({ title, description }) => {
       const newTask = {
-        id: (taskList.value.id != undefined) ? taskList.value[taskList.value.length - 1].id + 1 : 1,
+        id: (taskList.value.length+1),
         title,
         description,
         status: false
@@ -29,8 +29,9 @@ export default {
       taskList.value=taskList.value.map(el=>{
         if(el.id===id){
           el.status=true
+        }  
         return el
-        }})
+        })
       }
     const removeTask=(id)=>{
       taskList.value=taskList.value.filter(el => el.id!==id)
