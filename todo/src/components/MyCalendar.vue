@@ -2,7 +2,7 @@
     <div>
         <div>
             <button>&lt</button>
-            <h1></h1>
+            <h1> В разработке</h1>
             <button>&gt</button>
 
         </div>
